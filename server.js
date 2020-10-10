@@ -3,9 +3,9 @@ const db = require("./database");
 const cors = require('cors');
 
 const server = express()
-let port = process.env.PORT || 5000;
-server.use(express.json())
-server.use(cors())
+const port = process.env.PORT || 5000;
+server.use(express.json());
+server.use(cors());
 
 server.get("/", (req, res) => {
 	res.json({ message: "Hello, Mustang Lovers!" })
