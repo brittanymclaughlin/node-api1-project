@@ -3,7 +3,7 @@ const db = require("./database");
 const cors = require('cors');
 
 const server = express()
-
+let port = process.env.PORT || 5000;
 server.use(express.json())
 server.use(cors())
 
@@ -101,6 +101,6 @@ server.put("/api/cars/:id", (req, res) => {
     }
 })
 // web servers need to be continuously listening
-server.listen(5000, () => {
+server.listen(port, () => {
 	console.log("Mustang Server has started! Vroom vroom!!")
 })
